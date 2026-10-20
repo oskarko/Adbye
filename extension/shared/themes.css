@@ -1,0 +1,206 @@
+/* Color themes for the popup and options page (AdBlock Premium's "Themes"). */
+
+:root,
+[data-theme="default"] {
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --border: #e2e5ea;
+  --text: #1f2328;
+  --muted: #5f6672;
+  --accent: #d93025;
+  --accent-text: #ffffff;
+  --ok: #188038;
+  --warn: #b06000;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  [data-theme="default"] {
+    --bg: #1c1d21;
+    --surface: #26282d;
+    --border: #383b42;
+    --text: #e8eaed;
+    --muted: #a0a6b0;
+    --accent: #ef5b4f;
+    --accent-text: #ffffff;
+    --ok: #81c995;
+    --warn: #fdd663;
+    color-scheme: dark;
+  }
+}
+
+[data-theme="dark"] {
+  --bg: #121316;
+  --surface: #1e2024;
+  --border: #33363c;
+  --text: #ececec;
+  --muted: #9aa0a6;
+  --accent: #ff6b5e;
+  --accent-text: #121316;
+  --ok: #81c995;
+  --warn: #fdd663;
+  color-scheme: dark;
+}
+
+[data-theme="solarized"] {
+  --bg: #002b36;
+  --surface: #073642;
+  --border: #0d4a58;
+  --text: #eee8d5;
+  --muted: #93a1a1;
+  --accent: #cb4b16;
+  --accent-text: #fdf6e3;
+  --ok: #859900;
+  --warn: #b58900;
+  color-scheme: dark;
+}
+
+[data-theme="solarized_light"] {
+  --bg: #fdf6e3;
+  --surface: #eee8d5;
+  --border: #d9d2bd;
+  --text: #073642;
+  --muted: #586e75;
+  --accent: #cb4b16;
+  --accent-text: #fdf6e3;
+  --ok: #5f7000;
+  --warn: #8a6800;
+  color-scheme: light;
+}
+
+[data-theme="watermelon"] {
+  --bg: #fff5f6;
+  --surface: #ffe3e7;
+  --border: #f7c3cb;
+  --text: #2d1a1d;
+  --muted: #7a5258;
+  --accent: #2e8b57;
+  --accent-text: #ffffff;
+  --ok: #2e8b57;
+  --warn: #c2185b;
+  color-scheme: light;
+}
+
+[data-theme="sunshine"] {
+  --bg: #fffbea;
+  --surface: #fff3c4;
+  --border: #f5e08a;
+  --text: #2b2410;
+  --muted: #6d5f2e;
+  --accent: #d97706;
+  --accent-text: #ffffff;
+  --ok: #3f7d20;
+  --warn: #b45309;
+  color-scheme: light;
+}
+
+[data-theme="ocean"] {
+  --bg: #0b1e2d;
+  --surface: #12304a;
+  --border: #1d4466;
+  --text: #e3f2fd;
+  --muted: #90b4ce;
+  --accent: #29b6f6;
+  --accent-text: #0b1e2d;
+  --ok: #66bb6a;
+  --warn: #ffca28;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+button,
+.button {
+  font: inherit;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+input[type="text"],
+input[type="url"],
+textarea,
+select {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 9px;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--accent);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Switch built from a checkbox. */
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+}
+.switch input {
+  appearance: none;
+  flex: none;
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--border);
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  transition: background 0.15s;
+}
+.switch input::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.15s;
+}
+.switch input:checked {
+  background: var(--accent);
+}
+.switch input:checked::after {
+  transform: translateX(16px);
+}
+
+[hidden] {
+  display: none !important;
+}

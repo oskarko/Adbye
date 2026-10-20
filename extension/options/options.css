@@ -1,0 +1,252 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+nav {
+  flex: none;
+  width: 220px;
+  padding: 20px 12px;
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+nav .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 10px 16px;
+}
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+nav a:hover {
+  background: var(--border);
+}
+nav a.current {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+main {
+  flex: 1;
+  max-width: 820px;
+  padding: 24px 32px 48px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0 0 16px;
+}
+h2 {
+  font-size: 16px;
+  margin: 28px 0 6px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.banner {
+  background: var(--surface);
+  border-left: 4px solid var(--warn);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  white-space: pre-line;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--ok);
+  color: var(--bg);
+  vertical-align: 1px;
+}
+
+.inline,
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+.inline input {
+  flex: 1;
+  min-width: 200px;
+}
+
+textarea {
+  width: 100%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12.5px;
+}
+
+.rows {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+}
+ol.rows {
+  list-style: decimal inside;
+}
+.rows li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--border);
+}
+.rows li .grow {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.rows li button {
+  padding: 3px 9px;
+  font-size: 12px;
+}
+.rows .empty {
+  color: var(--muted);
+}
+
+.list-group {
+  margin-top: 18px;
+}
+.list-group h2 {
+  margin-top: 0;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+}
+.choice {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.choice[aria-pressed="true"] {
+  border-color: var(--accent);
+}
+.swatches {
+  display: flex;
+  height: 28px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.swatches span {
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 8px;
+  margin: 10px 0;
+}
+.grid figure {
+  margin: 0;
+  position: relative;
+}
+.grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+.grid button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  padding: 0 7px;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.kpis div {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.kpis span {
+  font-size: 26px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.kpis small {
+  color: var(--muted);
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 160px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.chart div {
+  flex: 1;
+  min-height: 1px;
+  background: var(--accent);
+  border-radius: 3px 3px 0 0;
+}
+
+.small {
+  font-size: 12px;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    flex-direction: column;
+  }
+  nav {
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px;
+  }
+  nav .brand {
+    width: 100%;
+    padding-bottom: 8px;
+  }
+  main {
+    padding: 16px;
+  }
+  .kpis {
+    grid-template-columns: 1fr;
+  }
+}

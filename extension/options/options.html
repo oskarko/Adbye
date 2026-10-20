@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AdBye</title>
+    <link rel="stylesheet" href="../shared/themes.css" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <nav>
+        <div class="brand"><img src="../icons/icon-48.png" alt="" width="32" height="32" /> AdBye</div>
+        <a href="#general" data-i18n="tabGeneral"></a>
+        <a href="#lists" data-i18n="tabLists"></a>
+        <a href="#customize" data-i18n="tabCustomize"></a>
+        <a href="#imageswap" data-i18n="tabImageSwap"></a>
+        <a href="#themes" data-i18n="tabThemes"></a>
+        <a href="#backup" data-i18n="tabBackup"></a>
+        <a href="#stats" data-i18n="tabStats"></a>
+        <a href="#about" data-i18n="tabAbout"></a>
+      </nav>
+
+      <main>
+        <div id="errors" class="banner" hidden></div>
+
+        <section id="general">
+          <h1 data-i18n="tabGeneral"></h1>
+          <div class="card">
+            <label class="switch"><span data-i18n="optPaused"></span><input type="checkbox" data-setting="paused" /></label>
+            <label class="switch"><span data-i18n="optBadge"></span><input type="checkbox" data-setting="showBadge" /></label>
+            <label class="switch"><span data-i18n="optContextMenu"></span><input type="checkbox" data-setting="contextMenu" /></label>
+            <label class="switch">
+              <span><span data-i18n="optNotifications"></span> <span class="tag" data-i18n="freeInAdBye"></span><br /><small class="muted" data-i18n="optNotificationsHelp"></small></span>
+              <input type="checkbox" data-setting="blockNotifications" />
+            </label>
+          </div>
+        </section>
+
+        <section id="lists" hidden>
+          <h1 data-i18n="tabLists"></h1>
+          <p class="muted" id="lists-built"></p>
+          <div id="list-groups"></div>
+          <h2 data-i18n="customLists"></h2>
+          <p class="muted" data-i18n="customListsHelp"></p>
+          <form id="add-list" class="inline">
+            <input type="url" id="list-url" required placeholder="https://…/filters.txt" />
+            <button class="primary" data-i18n="add"></button>
+          </form>
+          <ul id="custom-lists" class="rows"></ul>
+          <button id="refresh-lists" data-i18n="refreshLists"></button>
+        </section>
+
+        <section id="customize" hidden>
+          <h1 data-i18n="tabCustomize"></h1>
+          <h2 data-i18n="allowlist"></h2>
+          <p class="muted" data-i18n="allowlistHelp"></p>
+          <form id="add-allow" class="inline">
+            <input type="text" id="allow-host" required placeholder="example.com" />
+            <button class="primary" data-i18n="add"></button>
+          </form>
+          <ul id="allowlist" class="rows"></ul>
+
+          <h2 data-i18n="ytChannels"></h2>
+          <p class="muted" data-i18n="ytChannelsHelp"></p>
+          <ul id="yt-channels" class="rows"></ul>
+
+          <h2 data-i18n="customFilters"></h2>
+          <p class="muted" data-i18n="customFiltersHelp"></p>
+          <textarea id="custom-filters" rows="12" spellcheck="false"></textarea>
+          <div class="row">
+            <button id="save-filters" class="primary" data-i18n="save"></button>
+            <span id="filters-report" class="muted"></span>
+          </div>
+        </section>
+
+        <section id="imageswap" hidden>
+          <h1 data-i18n="tabImageSwap"></h1>
+          <p class="muted" data-i18n="imageSwapHelp"></p>
+          <div class="card">
+            <label class="switch"><span data-i18n="imageSwapEnable"></span><input type="checkbox" id="swap-enabled" /></label>
+          </div>
+          <div id="swap-channels" class="choices"></div>
+          <div id="custom-images" hidden>
+            <h2 data-i18n="customImages"></h2>
+            <p class="muted" data-i18n="customImagesHelp"></p>
+            <input type="file" id="image-files" accept="image/*" multiple />
+            <div id="image-grid" class="grid"></div>
+          </div>
+          <p class="muted small" data-i18n="imageSwapCredits"></p>
+        </section>
+
+        <section id="themes" hidden>
+          <h1 data-i18n="tabThemes"></h1>
+          <h2 data-i18n="themePopup"></h2>
+          <div class="choices" data-theme-target="popup"></div>
+          <h2 data-i18n="themeOptions"></h2>
+          <div class="choices" data-theme-target="options"></div>
+        </section>
+
+        <section id="backup" hidden>
+          <h1 data-i18n="tabBackup"></h1>
+          <div class="card">
+            <label class="switch"><span><span data-i18n="optSync"></span><br /><small class="muted" data-i18n="optSyncHelp"></small></span><input type="checkbox" data-setting="sync" /></label>
+          </div>
+          <div class="row">
+            <button id="export" data-i18n="exportBackup"></button>
+            <label class="button"><span data-i18n="importBackup"></span><input type="file" id="import" accept="application/json,.json" hidden /></label>
+            <span id="backup-status" class="muted"></span>
+          </div>
+        </section>
+
+        <section id="stats" hidden>
+          <h1 data-i18n="tabStats"></h1>
+          <div class="kpis">
+            <div><span id="stat-total">0</span><small data-i18n="blockedTotal"></small></div>
+            <div><span id="stat-today">0</span><small data-i18n="blockedToday"></small></div>
+            <div><span id="stat-month">0</span><small data-i18n="blocked30"></small></div>
+          </div>
+          <h2 data-i18n="last30"></h2>
+          <div id="chart" class="chart" role="img"></div>
+          <h2 data-i18n="topDomains"></h2>
+          <ol id="top-domains" class="rows"></ol>
+          <button id="reset-stats" data-i18n="resetStats"></button>
+        </section>
+
+        <section id="about" hidden>
+          <h1 data-i18n="tabAbout"></h1>
+          <p><strong>AdBye <span id="version"></span></strong> — <span data-i18n="aboutText"></span></p>
+          <p data-i18n="aboutLicense"></p>
+          <h2 data-i18n="aboutCredits"></h2>
+          <ul id="credits" class="rows"></ul>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

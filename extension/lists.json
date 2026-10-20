@@ -1,0 +1,137 @@
+[
+  {
+    "id": "easylist",
+    "title": "EasyList",
+    "category": "ads",
+    "url": "https://easylist.to/easylist/easylist.txt",
+    "homepage": "https://easylist.to/",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": true
+  },
+  {
+    "id": "easylist-es",
+    "title": "EasyList Spanish",
+    "category": "language",
+    "languages": ["es"],
+    "url": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
+    "homepage": "https://easylist.to/",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": false
+  },
+  {
+    "id": "easylist-de",
+    "title": "EasyList Germany",
+    "category": "language",
+    "languages": ["de"],
+    "url": "https://easylist.to/easylistgermany/easylistgermany.txt",
+    "homepage": "https://easylist.to/",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": false
+  },
+  {
+    "id": "liste-fr",
+    "title": "Liste FR",
+    "category": "language",
+    "languages": ["fr"],
+    "url": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
+    "homepage": "https://forums.lanik.us/",
+    "license": "GPL-3.0",
+    "default": false
+  },
+  {
+    "id": "easylist-it",
+    "title": "EasyList Italy",
+    "category": "language",
+    "languages": ["it"],
+    "url": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
+    "homepage": "https://easylist.to/",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": false
+  },
+  {
+    "id": "easylist-pt",
+    "title": "EasyList Portuguese",
+    "category": "language",
+    "languages": ["pt"],
+    "url": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
+    "homepage": "https://easylist.to/",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": false
+  },
+  {
+    "id": "easylist-nl",
+    "title": "EasyList Dutch",
+    "category": "language",
+    "languages": ["nl"],
+    "url": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
+    "homepage": "https://easylist.to/",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": false
+  },
+  {
+    "id": "easyprivacy",
+    "title": "EasyPrivacy",
+    "category": "privacy",
+    "url": "https://easylist.to/easylist/easyprivacy.txt",
+    "homepage": "https://easylist.to/",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": true
+  },
+  {
+    "id": "anti-cv",
+    "title": "ABP Anti-Circumvention",
+    "category": "ads",
+    "url": "https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt",
+    "homepage": "https://github.com/abp-filters/abp-filters-anti-cv",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": true
+  },
+  {
+    "id": "cookies",
+    "title": "EasyList Cookie List",
+    "category": "cookies",
+    "premium": true,
+    "url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+    "homepage": "https://easylist.to/",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": true
+  },
+  {
+    "id": "annoyances",
+    "title": "Fanboy's Annoyance List",
+    "category": "distractions",
+    "premium": true,
+    "url": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+    "homepage": "https://easylist.to/",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": true
+  },
+  {
+    "id": "notifications",
+    "title": "Fanboy's Notifications Blocking List",
+    "category": "distractions",
+    "premium": true,
+    "url": "https://easylist-downloads.adblockplus.org/fanboy-notifications.txt",
+    "homepage": "https://easylist.to/",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": true
+  },
+  {
+    "id": "social",
+    "title": "Fanboy's Social Blocking List",
+    "category": "privacy",
+    "url": "https://easylist.to/easylist/fanboy-social.txt",
+    "homepage": "https://easylist.to/",
+    "license": "GPL-3.0 / CC BY-SA 3.0",
+    "default": false
+  },
+  {
+    "id": "nocoin",
+    "title": "NoCoin Filter List",
+    "category": "security",
+    "url": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt",
+    "homepage": "https://github.com/hoshsadiq/adblock-nocoin-list",
+    "license": "MIT",
+    "default": true
+  }
+]

@@ -1,0 +1,31 @@
+name: Update filter lists
+
+# Rebuilds the bundled DNR rulesets every Monday and opens a PR when the
+# filter lists changed, so a release can ship fresh rules.
+on:
+  schedule:
+    - cron: "17 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build:lists
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: update-filter-lists
+          title: Update filter lists
+          commit-message: Update filter lists
+          body: Weekly rebuild of the bundled filter lists (`npm run build:lists`).

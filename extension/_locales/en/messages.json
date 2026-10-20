@@ -1,0 +1,371 @@
+{
+  "extName": {
+    "message": "AdBye"
+  },
+  "extDescription": {
+    "message": "Free and open source ad blocker. Every premium feature, free."
+  },
+  "menuBlockElement": {
+    "message": "Block this element"
+  },
+  "menuAllowSite": {
+    "message": "Don't block ads on this site"
+  },
+  "pickerTitle": {
+    "message": "Block an element"
+  },
+  "pickerHint": {
+    "message": "Click the element you want to hide. Press Esc to cancel."
+  },
+  "pickerScope": {
+    "message": "Selection size"
+  },
+  "pickerMatches": {
+    "message": "$P1$ elements match",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "pickerBlock": {
+    "message": "Block it"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "openOptions": {
+    "message": "Options"
+  },
+  "blockedOnPage": {
+    "message": "on this page"
+  },
+  "blockedTotal": {
+    "message": "in total"
+  },
+  "blockAnAd": {
+    "message": "Block an ad on this page"
+  },
+  "allowSite": {
+    "message": "Don't block on this site"
+  },
+  "pauseTab": {
+    "message": "Pause on this tab"
+  },
+  "pauseAll": {
+    "message": "Pause AdBye everywhere"
+  },
+  "imageSwap": {
+    "message": "Swap ads for pictures"
+  },
+  "footerFree": {
+    "message": "Free software (GPL-3.0). No accounts, no payments, no \"acceptable\" ads."
+  },
+  "statusActive": {
+    "message": "Blocking ads"
+  },
+  "statusNotWeb": {
+    "message": "AdBye doesn't run on this page"
+  },
+  "statusPausedAll": {
+    "message": "AdBye is paused"
+  },
+  "statusAllowlisted": {
+    "message": "Site is allowlisted"
+  },
+  "statusTabPaused": {
+    "message": "Paused on this tab"
+  },
+  "statusChannelAllowed": {
+    "message": "Ads allowed on this channel"
+  },
+  "allowChannel": {
+    "message": "Allow ads on $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "tabGeneral": {
+    "message": "General"
+  },
+  "tabLists": {
+    "message": "Filter lists"
+  },
+  "tabCustomize": {
+    "message": "Customize"
+  },
+  "tabImageSwap": {
+    "message": "Image Swap"
+  },
+  "tabThemes": {
+    "message": "Themes"
+  },
+  "tabBackup": {
+    "message": "Backup & sync"
+  },
+  "tabStats": {
+    "message": "Statistics"
+  },
+  "tabAbout": {
+    "message": "About"
+  },
+  "optPaused": {
+    "message": "Pause AdBye everywhere"
+  },
+  "optBadge": {
+    "message": "Show the blocked count on the icon"
+  },
+  "optContextMenu": {
+    "message": "Add items to the right-click menu"
+  },
+  "optNotifications": {
+    "message": "Deny push notification requests"
+  },
+  "optNotificationsHelp": {
+    "message": "Sites won't be able to ask permission to send you notifications."
+  },
+  "freeInAdBye": {
+    "message": "Premium, free"
+  },
+  "customLists": {
+    "message": "Your own lists"
+  },
+  "customListsHelp": {
+    "message": "Add the URL of any list in Adblock Plus syntax. They update every 24 hours."
+  },
+  "add": {
+    "message": "Add"
+  },
+  "refreshLists": {
+    "message": "Update now"
+  },
+  "allowlist": {
+    "message": "Allowed sites"
+  },
+  "allowlistHelp": {
+    "message": "AdBye blocks nothing on these sites or their subdomains."
+  },
+  "ytChannels": {
+    "message": "Allowed YouTube channels"
+  },
+  "ytChannelsHelp": {
+    "message": "Support your favorite creators: their videos will show ads. Add them from the popup on their channel or video."
+  },
+  "ytChannelsEmpty": {
+    "message": "No channels. Open a video and switch it on from the popup."
+  },
+  "customFilters": {
+    "message": "Your own filters"
+  },
+  "customFiltersHelp": {
+    "message": "One filter per line, in Adblock Plus syntax: ||ads.example.com^, example.com##.banner, @@||example.com^$document."
+  },
+  "save": {
+    "message": "Save"
+  },
+  "saved": {
+    "message": "Saved"
+  },
+  "filtersInvalid": {
+    "message": "$P1$ unsupported filters: $P2$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "customDropped": {
+    "message": "$P1$ custom filters were ignored because they exceed Chrome's limit.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "imageSwapHelp": {
+    "message": "Instead of leaving gaps, AdBye puts a picture where an ad was."
+  },
+  "imageSwapEnable": {
+    "message": "Turn on Image Swap"
+  },
+  "customImages": {
+    "message": "Your pictures"
+  },
+  "customImagesHelp": {
+    "message": "Stored only in this browser, scaled down to 800 px."
+  },
+  "imageSwapCredits": {
+    "message": "Some sites block outside images through their security policy (CSP); there the ad is simply hidden."
+  },
+  "swap_cats": {
+    "message": "Cats"
+  },
+  "swap_cats_src": {
+    "message": "cataas.com"
+  },
+  "swap_dogs": {
+    "message": "Dogs"
+  },
+  "swap_dogs_src": {
+    "message": "dog.ceo"
+  },
+  "swap_landscapes": {
+    "message": "Landscapes"
+  },
+  "swap_landscapes_src": {
+    "message": "picsum.photos"
+  },
+  "swap_grayscale": {
+    "message": "Black & white"
+  },
+  "swap_grayscale_src": {
+    "message": "picsum.photos"
+  },
+  "swap_custom": {
+    "message": "Your pictures"
+  },
+  "swap_custom_src": {
+    "message": "Uploaded by you"
+  },
+  "themePopup": {
+    "message": "Popup"
+  },
+  "themeOptions": {
+    "message": "Options page"
+  },
+  "theme_default": {
+    "message": "Automatic"
+  },
+  "theme_dark": {
+    "message": "Dark"
+  },
+  "theme_solarized": {
+    "message": "Solarized"
+  },
+  "theme_solarized_light": {
+    "message": "Solarized light"
+  },
+  "theme_watermelon": {
+    "message": "Watermelon"
+  },
+  "theme_sunshine": {
+    "message": "Sunshine"
+  },
+  "theme_ocean": {
+    "message": "Ocean"
+  },
+  "optSync": {
+    "message": "Sync settings across browsers"
+  },
+  "optSyncHelp": {
+    "message": "Uses your browser's own sync. Nothing goes through AdBye servers (there are none)."
+  },
+  "exportBackup": {
+    "message": "Export backup"
+  },
+  "importBackup": {
+    "message": "Import backup"
+  },
+  "importDone": {
+    "message": "Backup imported"
+  },
+  "importFailed": {
+    "message": "Couldn't import: $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockedToday": {
+    "message": "today"
+  },
+  "blocked30": {
+    "message": "last 30 days"
+  },
+  "last30": {
+    "message": "Blocks per day"
+  },
+  "topDomains": {
+    "message": "Most blocked domains"
+  },
+  "resetStats": {
+    "message": "Reset statistics"
+  },
+  "resetStatsConfirm": {
+    "message": "Reset all statistics?"
+  },
+  "aboutText": {
+    "message": "a free ad blocker with no accounts and no paid features."
+  },
+  "aboutLicense": {
+    "message": "Free software under the GPL-3.0 license. Not affiliated with AdBlock, eyeo or Adblock Plus."
+  },
+  "aboutCredits": {
+    "message": "Lists and services"
+  },
+  "listsBuilt": {
+    "message": "Lists bundled on $P1$. They update with each AdBye release.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "listRules": {
+    "message": "$P1$ network rules, $P2$ hiding rules",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "listError": {
+    "message": "error: $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "listUpdated": {
+    "message": "updated $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "group_ads": {
+    "message": "Ads"
+  },
+  "group_language": {
+    "message": "Ads by language"
+  },
+  "group_privacy": {
+    "message": "Privacy"
+  },
+  "group_cookies": {
+    "message": "Cookie notices"
+  },
+  "group_distractions": {
+    "message": "Distractions"
+  },
+  "group_security": {
+    "message": "Security"
+  },
+  "none": {
+    "message": "None"
+  },
+  "remove": {
+    "message": "Remove"
+  }
+}

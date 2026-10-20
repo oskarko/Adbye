@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AdBye</title>
+    <link rel="stylesheet" href="../shared/themes.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../icons/icon-32.png" alt="" width="24" height="24" />
+      <strong>AdBye</strong>
+      <button id="open-options" class="icon" data-i18n-title="openOptions" aria-label="Options">⚙</button>
+    </header>
+
+    <section id="status" class="status">
+      <p id="status-text"></p>
+      <p id="host" class="muted"></p>
+    </section>
+
+    <section class="counts">
+      <div><span id="count-page">0</span><small data-i18n="blockedOnPage"></small></div>
+      <div><span id="count-total">0</span><small data-i18n="blockedTotal"></small></div>
+    </section>
+
+    <section id="errors" class="errors" hidden></section>
+
+    <section class="actions">
+      <button id="pick" class="primary" data-i18n="blockAnAd"></button>
+      <label class="switch site-only"><span data-i18n="allowSite"></span><input type="checkbox" id="allow-site" /></label>
+      <label class="switch site-only"><span data-i18n="pauseTab"></span><input type="checkbox" id="pause-tab" /></label>
+      <label id="channel-row" class="switch" hidden><span id="channel-label"></span><input type="checkbox" id="allow-channel" /></label>
+      <label class="switch"><span data-i18n="imageSwap"></span><input type="checkbox" id="image-swap" /></label>
+      <label class="switch"><span data-i18n="pauseAll"></span><input type="checkbox" id="pause-all" /></label>
+    </section>
+
+    <footer class="muted" data-i18n="footerFree"></footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,371 @@
+{
+  "extName": {
+    "message": "AdBye"
+  },
+  "extDescription": {
+    "message": "Bloqueador de anuncios libre y de código abierto. Todas las funciones premium, gratis."
+  },
+  "menuBlockElement": {
+    "message": "Bloquear este elemento"
+  },
+  "menuAllowSite": {
+    "message": "No bloquear anuncios en este sitio"
+  },
+  "pickerTitle": {
+    "message": "Bloquear un elemento"
+  },
+  "pickerHint": {
+    "message": "Haz clic en el elemento que quieres ocultar. Esc para cancelar."
+  },
+  "pickerScope": {
+    "message": "Tamaño de la selección"
+  },
+  "pickerMatches": {
+    "message": "$P1$ elementos coinciden",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "pickerBlock": {
+    "message": "Bloquear"
+  },
+  "cancel": {
+    "message": "Cancelar"
+  },
+  "openOptions": {
+    "message": "Opciones"
+  },
+  "blockedOnPage": {
+    "message": "en esta página"
+  },
+  "blockedTotal": {
+    "message": "en total"
+  },
+  "blockAnAd": {
+    "message": "Bloquear un anuncio en esta página"
+  },
+  "allowSite": {
+    "message": "No bloquear en este sitio"
+  },
+  "pauseTab": {
+    "message": "Pausar en esta pestaña"
+  },
+  "pauseAll": {
+    "message": "Pausar AdBye en todas partes"
+  },
+  "imageSwap": {
+    "message": "Cambiar anuncios por imágenes"
+  },
+  "footerFree": {
+    "message": "Libre (GPL-3.0). Sin cuentas, sin pagos, sin anuncios «aceptables»."
+  },
+  "statusActive": {
+    "message": "Bloqueando anuncios"
+  },
+  "statusNotWeb": {
+    "message": "AdBye no funciona en esta página"
+  },
+  "statusPausedAll": {
+    "message": "AdBye está en pausa"
+  },
+  "statusAllowlisted": {
+    "message": "Sitio en la lista de permitidos"
+  },
+  "statusTabPaused": {
+    "message": "En pausa en esta pestaña"
+  },
+  "statusChannelAllowed": {
+    "message": "Anuncios permitidos en este canal"
+  },
+  "allowChannel": {
+    "message": "Permitir anuncios en $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "tabGeneral": {
+    "message": "General"
+  },
+  "tabLists": {
+    "message": "Listas de filtros"
+  },
+  "tabCustomize": {
+    "message": "Personalizar"
+  },
+  "tabImageSwap": {
+    "message": "Cambio de imágenes"
+  },
+  "tabThemes": {
+    "message": "Temas"
+  },
+  "tabBackup": {
+    "message": "Copia y sincronización"
+  },
+  "tabStats": {
+    "message": "Estadísticas"
+  },
+  "tabAbout": {
+    "message": "Acerca de"
+  },
+  "optPaused": {
+    "message": "Pausar AdBye en todas partes"
+  },
+  "optBadge": {
+    "message": "Mostrar el número de bloqueos en el icono"
+  },
+  "optContextMenu": {
+    "message": "Añadir opciones al menú contextual"
+  },
+  "optNotifications": {
+    "message": "Rechazar peticiones de notificaciones push"
+  },
+  "optNotificationsHelp": {
+    "message": "Las webs no podrán pedirte permiso para enviar notificaciones."
+  },
+  "freeInAdBye": {
+    "message": "Premium gratis"
+  },
+  "customLists": {
+    "message": "Listas propias"
+  },
+  "customListsHelp": {
+    "message": "Añade la URL de cualquier lista en formato Adblock Plus. Se actualizan cada 24 horas."
+  },
+  "add": {
+    "message": "Añadir"
+  },
+  "refreshLists": {
+    "message": "Actualizar ahora"
+  },
+  "allowlist": {
+    "message": "Sitios permitidos"
+  },
+  "allowlistHelp": {
+    "message": "AdBye no bloquea nada en estos sitios ni en sus subdominios."
+  },
+  "ytChannels": {
+    "message": "Canales de YouTube permitidos"
+  },
+  "ytChannelsHelp": {
+    "message": "Apoya a tus creadores favoritos: sus vídeos mostrarán anuncios. Añádelos desde el popup en su canal o vídeo."
+  },
+  "ytChannelsEmpty": {
+    "message": "Ningún canal. Abre un vídeo y actívalo desde el popup."
+  },
+  "customFilters": {
+    "message": "Filtros propios"
+  },
+  "customFiltersHelp": {
+    "message": "Un filtro por línea, en sintaxis Adblock Plus: ||ads.example.com^, example.com##.banner, @@||example.com^$document."
+  },
+  "save": {
+    "message": "Guardar"
+  },
+  "saved": {
+    "message": "Guardado"
+  },
+  "filtersInvalid": {
+    "message": "$P1$ filtros no soportados: $P2$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "customDropped": {
+    "message": "Se han ignorado $P1$ filtros propios por superar el límite de Chrome.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "imageSwapHelp": {
+    "message": "En lugar de dejar huecos, AdBye pone una imagen donde había un anuncio."
+  },
+  "imageSwapEnable": {
+    "message": "Activar el cambio de imágenes"
+  },
+  "customImages": {
+    "message": "Tus imágenes"
+  },
+  "customImagesHelp": {
+    "message": "Se guardan solo en este navegador, reducidas a 800 px."
+  },
+  "imageSwapCredits": {
+    "message": "Algunas webs bloquean imágenes externas con su política de seguridad (CSP); ahí el anuncio simplemente se oculta."
+  },
+  "swap_cats": {
+    "message": "Gatos"
+  },
+  "swap_cats_src": {
+    "message": "cataas.com"
+  },
+  "swap_dogs": {
+    "message": "Perros"
+  },
+  "swap_dogs_src": {
+    "message": "dog.ceo"
+  },
+  "swap_landscapes": {
+    "message": "Paisajes"
+  },
+  "swap_landscapes_src": {
+    "message": "picsum.photos"
+  },
+  "swap_grayscale": {
+    "message": "Blanco y negro"
+  },
+  "swap_grayscale_src": {
+    "message": "picsum.photos"
+  },
+  "swap_custom": {
+    "message": "Tus imágenes"
+  },
+  "swap_custom_src": {
+    "message": "Subidas por ti"
+  },
+  "themePopup": {
+    "message": "Popup"
+  },
+  "themeOptions": {
+    "message": "Página de opciones"
+  },
+  "theme_default": {
+    "message": "Automático"
+  },
+  "theme_dark": {
+    "message": "Oscuro"
+  },
+  "theme_solarized": {
+    "message": "Solarized"
+  },
+  "theme_solarized_light": {
+    "message": "Solarized claro"
+  },
+  "theme_watermelon": {
+    "message": "Sandía"
+  },
+  "theme_sunshine": {
+    "message": "Sol"
+  },
+  "theme_ocean": {
+    "message": "Océano"
+  },
+  "optSync": {
+    "message": "Sincronizar ajustes entre navegadores"
+  },
+  "optSyncHelp": {
+    "message": "Usa la sincronización de tu navegador. Nada pasa por servidores de AdBye (no existen)."
+  },
+  "exportBackup": {
+    "message": "Exportar copia"
+  },
+  "importBackup": {
+    "message": "Importar copia"
+  },
+  "importDone": {
+    "message": "Copia importada"
+  },
+  "importFailed": {
+    "message": "No se pudo importar: $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "blockedToday": {
+    "message": "hoy"
+  },
+  "blocked30": {
+    "message": "últimos 30 días"
+  },
+  "last30": {
+    "message": "Bloqueos por día"
+  },
+  "topDomains": {
+    "message": "Dominios más bloqueados"
+  },
+  "resetStats": {
+    "message": "Borrar estadísticas"
+  },
+  "resetStatsConfirm": {
+    "message": "¿Borrar todas las estadísticas?"
+  },
+  "aboutText": {
+    "message": "bloqueador de anuncios libre, sin cuentas ni funciones de pago."
+  },
+  "aboutLicense": {
+    "message": "Software libre bajo la licencia GPL-3.0. No está afiliado a AdBlock, eyeo ni Adblock Plus."
+  },
+  "aboutCredits": {
+    "message": "Listas y servicios"
+  },
+  "listsBuilt": {
+    "message": "Listas incluidas el $P1$. Se actualizan con cada versión de AdBye.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "listRules": {
+    "message": "$P1$ reglas de red, $P2$ de ocultación",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "listError": {
+    "message": "error: $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "listUpdated": {
+    "message": "actualizada $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "group_ads": {
+    "message": "Anuncios"
+  },
+  "group_language": {
+    "message": "Anuncios por idioma"
+  },
+  "group_privacy": {
+    "message": "Privacidad"
+  },
+  "group_cookies": {
+    "message": "Avisos de cookies"
+  },
+  "group_distractions": {
+    "message": "Distracciones"
+  },
+  "group_security": {
+    "message": "Seguridad"
+  },
+  "none": {
+    "message": "Ninguno"
+  },
+  "remove": {
+    "message": "Quitar"
+  }
+}
