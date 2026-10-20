@@ -30,18 +30,27 @@
     </style>
     <div class="box" hidden></div>
     <div class="panel">
-      <h1>${t("pickerTitle", "Block an element")}</h1>
-      <p class="hint">${t("pickerHint", "Click the element you want to hide. Press Esc to cancel.")}</p>
+      <h1></h1>
+      <p class="hint"></p>
       <div class="chosen" hidden>
         <code></code>
-        <label>${t("pickerScope", "Selection size")}<input type="range" min="0" value="0"></label>
+        <label><input type="range" min="0" value="0"></label>
         <p class="count"></p>
       </div>
       <div class="row">
-        <button class="cancel">${t("cancel", "Cancel")}</button>
-        <button class="ok" disabled>${t("pickerBlock", "Block it")}</button>
+        <button class="cancel"></button>
+        <button class="ok" disabled></button>
       </div>
     </div>`;
+  // Text goes in as text nodes, never as markup.
+  const texts = {
+    h1: t("pickerTitle", "Block an element"),
+    ".hint": t("pickerHint", "Click the element you want to hide. Press Esc to cancel."),
+    label: t("pickerScope", "Selection size"),
+    ".cancel": t("cancel", "Cancel"),
+    ".ok": t("pickerBlock", "Block it"),
+  };
+  for (const [selector, text] of Object.entries(texts)) shadow.querySelector(selector).prepend(text);
 
   const box = shadow.querySelector(".box");
   const panel = shadow.querySelector(".panel");

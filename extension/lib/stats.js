@@ -1,7 +1,10 @@
 // Blocked request counters. DNR blocks surface in webRequest as
-// net::ERR_BLOCKED_BY_CLIENT, which needs no feedback permission.
+// net::ERR_BLOCKED_BY_CLIENT (Chromium) or NS_ERROR_ABORT (Firefox), which
+// needs no feedback permission.
 
 import { getSettings } from "./settings.js";
+
+const BLOCKED_ERRORS = new Set(["net::ERR_BLOCKED_BY_CLIENT", "NS_ERROR_ABORT"]);
 
 const DAYS_KEPT = 30;
 const TOP_DOMAINS_KEPT = 200;
@@ -47,7 +50,7 @@ async function updateBadge(tabId) {
 }
 
 async function onBlocked(details) {
-  if (details.error !== "net::ERR_BLOCKED_BY_CLIENT" || details.tabId < 0) return;
+  if (!BLOCKED_ERRORS.has(details.error) || details.tabId < 0) return;
   await load();
   stats.total++;
   const day = today();

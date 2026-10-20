@@ -318,7 +318,7 @@
     }
   },
   "listRules": {
-    "message": "$P1$ network rules, $P2$ hiding rules",
+    "message": "$P1$ network filters, $P2$ hiding filters",
     "placeholders": {
       "p1": {
         "content": "$1"
@@ -367,5 +367,11 @@
   },
   "remove": {
     "message": "Remove"
+  },
+  "hostAccessMissing": {
+    "message": "AdBye can't access websites, so it can't block anything."
+  },
+  "hostAccessGrant": {
+    "message": "Allow access to all websites"
   }
 }

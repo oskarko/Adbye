@@ -1,6 +1,7 @@
 import { applyTheme, formatNumber, localize, send, t } from "../shared/ui.js";
 
 const $ = (id) => document.getElementById(id);
+const ALL_SITES = { origins: ["<all_urls>"] };
 
 async function render() {
   const state = await send("getPopupState");
@@ -26,6 +27,8 @@ async function render() {
 
   $("errors").hidden = !state.errors.length;
   $("errors").textContent = state.errors.join("\n");
+  // Firefox lets users withdraw site access after install; without it nothing is blocked.
+  $("host-access").hidden = await chrome.permissions.contains(ALL_SITES);
 
   for (const el of document.querySelectorAll(".site-only")) el.hidden = !state.web;
   $("pick").disabled = !active;
@@ -46,6 +49,12 @@ function wire(state) {
   const reloadTab = () => chrome.tabs.reload(state.tabId);
 
   $("open-options").addEventListener("click", () => chrome.runtime.openOptionsPage());
+  $("grant-access").addEventListener("click", async () => {
+    if (await chrome.permissions.request(ALL_SITES)) {
+      reloadTab();
+      render();
+    }
+  });
   $("pick").addEventListener("click", async () => {
     await send("startPicker", { tabId: state.tabId });
     window.close();

@@ -318,7 +318,7 @@
     }
   },
   "listRules": {
-    "message": "$P1$ reglas de red, $P2$ de ocultación",
+    "message": "$P1$ filtros de red, $P2$ de ocultación",
     "placeholders": {
       "p1": {
         "content": "$1"
@@ -367,5 +367,11 @@
   },
   "remove": {
     "message": "Quitar"
+  },
+  "hostAccessMissing": {
+    "message": "AdBye no tiene acceso a las webs, así que no puede bloquear nada."
+  },
+  "hostAccessGrant": {
+    "message": "Permitir acceso a todas las webs"
   }
 }

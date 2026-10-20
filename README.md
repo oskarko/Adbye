@@ -9,7 +9,7 @@ No accounts. No sign-ups. No licenses. No AdBye servers. Install it and it works
 
 [![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
 ![Manifest V3](https://img.shields.io/badge/manifest-v3-green.svg)
-![Chrome | Edge | Brave](https://img.shields.io/badge/browsers-Chrome%20%7C%20Edge%20%7C%20Brave-orange.svg)
+![Chrome | Edge | Brave | Firefox](https://img.shields.io/badge/browsers-Chrome%20%7C%20Edge%20%7C%20Brave%20%7C%20Firefox-orange.svg)
 
 </div>
 
@@ -75,6 +75,18 @@ That's it. Blocking starts immediately with sensible defaults, and the regional 
 > **Brave users:** Brave Shields also block ads. To see what AdBye does on its own, turn Shields off for the site you're testing.
 
 To update, run `git pull`, then click the reload button ↻ on AdBye's card in the extensions page.
+
+### Firefox
+
+AdBye runs on Firefox 140 or newer, from the same `extension` folder.
+
+1. Open `about:debugging#/runtime/this-firefox`.
+2. Click **Load Temporary Add-on…** and select **`extension/manifest.json`**.
+3. Pin AdBye from the puzzle-piece menu.
+
+Firefox removes temporary add-ons when it closes, so you load it again after each restart. A permanent install needs a copy signed by Mozilla, which is how every Firefox add-on is distributed; you still won't need an account to use AdBye.
+
+If the popup says AdBye can't access websites, click **Allow access to all websites**. Firefox lets you withdraw site access from an extension at any time, and without it AdBye can't block anything.
 
 ## Using AdBye
 
@@ -200,7 +212,8 @@ flowchart LR
 
 Manifest V3 extensions can't inspect requests in JavaScript. Instead, the browser applies declarative rules natively, which is fast and private.
 
-- **Static rulesets.** Each filter list is compiled at build time into its own static ruleset, about 136,000 rules in total. Turning a list on or off only enables or disables its ruleset; nothing is parsed at runtime.
+- **Static rulesets.** Each filter list is compiled at build time into its own static ruleset, about 27,000 rules in total (about 18,800 with the default lists). Turning a list on or off only enables or disables its ruleset; nothing is parsed at runtime.
+- **Merged domain rules.** Most filters are plain `||example.com^` blocks. The build merges those that share the same options into one rule with a `requestDomains` list, which turns about 136,000 rules into 27,000 without changing what gets blocked. This keeps every list within Firefox's limit of 30,000 static rules per extension. Large lists are also split into rulesets under 4 MB (`easylist`, `easylist__2`, …), since Mozilla's add-on store rejects bigger files.
 - **Dynamic rules.** Custom filters, custom list URLs and the allowlist are compiled to dynamic rules when they change. If one rule is rejected, AdBye adds the rest one by one so a single bad line can't disable everything.
 - **Session rules.** Pausing a tab and allowing a YouTube channel use tab-scoped `allowAllRequests` rules, which disappear when the browser closes.
 
@@ -220,28 +233,28 @@ When Image Swap is on, ad slots in the top frame are hidden with `visibility: hi
 
 ### Statistics
 
-The browser reports requests blocked by `declarativeNetRequest` as `net::ERR_BLOCKED_BY_CLIENT` errors. AdBye counts those through `webRequest.onErrorOccurred`, which observes but never blocks, together with the number of elements hidden on each page. Counts are kept per tab, per day (30 days) and per domain.
+The browser reports requests blocked by `declarativeNetRequest` as errors: `net::ERR_BLOCKED_BY_CLIENT` in Chromium and `NS_ERROR_ABORT` in Firefox. AdBye counts those through `webRequest.onErrorOccurred`, which observes but never blocks, together with the number of elements hidden on each page. Counts are kept per tab, per day (30 days) and per domain.
 
 ## Bundled filter lists
 
-| List | Category | On by default | Network rules | Hiding rules | License |
+| List | Category | On by default | Network filters | Hiding rules | License |
 |---|---|:---:|---:|---:|---|
-| EasyList | Ads | ✅ | 55,686 | 24,363 | GPL-3.0 / CC BY-SA 3.0 |
+| EasyList | Ads | ✅ | 55,693 | 24,363 | GPL-3.0 / CC BY-SA 3.0 |
 | ABP Anti-Circumvention | Ads | ✅ | 2,026 | 454 | GPL-3.0 / CC BY-SA 3.0 |
 | EasyPrivacy | Privacy | ✅ | 56,289 | 2 | GPL-3.0 / CC BY-SA 3.0 |
 | Fanboy's Social Blocking List | Privacy | | 656 | 13,163 | GPL-3.0 / CC BY-SA 3.0 |
 | EasyList Cookie List | Cookie banners | ✅ | 2,104 | 23,153 | GPL-3.0 / CC BY-SA 3.0 |
-| Fanboy's Annoyance List | Distractions | ✅ | 4,137 | 46,067 | GPL-3.0 / CC BY-SA 3.0 |
+| Fanboy's Annoyance List | Distractions | ✅ | 4,138 | 46,067 | GPL-3.0 / CC BY-SA 3.0 |
 | Fanboy's Notifications Blocking List | Distractions | ✅ | 405 | 948 | GPL-3.0 / CC BY-SA 3.0 |
-| NoCoin | Security | ✅ | 314 | 0 | MIT |
+| NoCoin | Security | ✅ | 311 | 0 | MIT |
 | EasyList Spanish | Language (es) | auto | 625 | 1,920 | GPL-3.0 / CC BY-SA 3.0 |
-| EasyList Germany | Language (de) | auto | 2,193 | 3,577 | GPL-3.0 / CC BY-SA 3.0 |
-| Liste FR | Language (fr) | auto | 9,767 | 3,444 | GPL-3.0 |
+| EasyList Germany | Language (de) | auto | 2,191 | 3,577 | GPL-3.0 / CC BY-SA 3.0 |
+| Liste FR | Language (fr) | auto | 9,765 | 3,444 | GPL-3.0 |
 | EasyList Italy | Language (it) | auto | 1,134 | 3,028 | GPL-3.0 / CC BY-SA 3.0 |
 | EasyList Portuguese | Language (pt) | auto | 303 | 1,316 | GPL-3.0 / CC BY-SA 3.0 |
 | EasyList Dutch | Language (nl) | auto | 469 | 1,020 | GPL-3.0 / CC BY-SA 3.0 |
 
-"auto" means the list is turned on at install when it matches the browser language. Counts are from the build of October 2026 and change with each rebuild.
+"auto" means the list is turned on at install when it matches the browser language. Counts are filters, before domain rules are merged, from the build of October 2026; they change with each rebuild.
 
 ## How AdBye was built
 
@@ -265,7 +278,7 @@ AdBye began as a study of how the AdBlock extension (version 6.x, Chrome Web Sto
 
 | Area | Used |
 |---|---|
-| Platform | Chrome Extensions Manifest V3: `declarativeNetRequest`, `scripting`, `storage`, `contextMenus`, `webRequest` (observe only), `webNavigation` |
+| Platform | WebExtensions Manifest V3 (Chromium and Firefox): `declarativeNetRequest`, `scripting`, `storage`, `contextMenus`, `webRequest` (observe only), `webNavigation` |
 | Language | Modern JavaScript (ES modules), HTML, CSS custom properties for theming |
 | Filter compilation | [`@eyeo/abp2dnr`](https://www.npmjs.com/package/@eyeo/abp2dnr) (GPL-3.0), which converts Adblock Plus filters to DNR rules |
 | Selector validation | [`css-what`](https://github.com/fb55/css-what), which drops hiding rules the browser couldn't parse |
@@ -278,7 +291,7 @@ AdBye began as a study of how the AdBlock extension (version 6.x, Chrome Web Sto
 
 ### 4. Verification
 
-Besides unit tests for the filter parser, the extension was tested end to end in headless Microsoft Edge and Brave, driven over the Chrome DevTools Protocol. Those tests checked that:
+Besides unit tests for the filter parser, the extension was tested end to end in headless Microsoft Edge and Brave, driven over the Chrome DevTools Protocol, and in headless Firefox, driven through geckodriver. Those tests checked that:
 
 - rulesets load;
 - ad requests are blocked and ad elements hidden;
@@ -350,7 +363,8 @@ Copy `extension/_locales/en/messages.json` to `extension/_locales/<lang>/message
 - **No procedural filters or snippets.** Adblock Plus `#?#` and `#$#` filters need script injection that AdBye doesn't implement yet; the build drops them. This mostly affects ads that YouTube injects through scripts.
 - **Image Swap and strict sites.** Sites with a strict Content Security Policy block external images; on those sites the ad is just hidden.
 - **YouTube channel detection** reads YouTube's page structure and may need fixes when YouTube changes it.
-- **Chromium only.** Firefox and Safari aren't supported yet.
+- **No Safari yet.** Safari needs the extension wrapped in a native app built with Xcode.
+- **Firefox needs re-loading after a restart** until AdBye is signed by Mozilla; see [Firefox](#firefox).
 
 ## Contributing
 

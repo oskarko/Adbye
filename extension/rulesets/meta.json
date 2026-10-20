@@ -1,99 +1,99 @@
 {
-  "builtAt": "2026-10-20T08:08:24.664Z",
+  "builtAt": "2026-10-20T08:43:18.285Z",
   "lists": {
     "easylist": {
-      "rules": 55686,
+      "rules": 3729,
       "network": 55693,
       "cosmetic": 24363,
       "skipped": 3911,
       "regexDropped": 0
     },
     "easylist-es": {
-      "rules": 625,
+      "rules": 588,
       "network": 625,
       "cosmetic": 1920,
       "skipped": 101,
       "regexDropped": 0
     },
     "easylist-de": {
-      "rules": 2193,
+      "rules": 1846,
       "network": 2191,
       "cosmetic": 3577,
       "skipped": 206,
       "regexDropped": 0
     },
     "liste-fr": {
-      "rules": 9767,
+      "rules": 3633,
       "network": 9765,
       "cosmetic": 3444,
       "skipped": 846,
       "regexDropped": 0
     },
     "easylist-it": {
-      "rules": 1134,
+      "rules": 1057,
       "network": 1134,
       "cosmetic": 3028,
       "skipped": 49,
       "regexDropped": 0
     },
     "easylist-pt": {
-      "rules": 303,
+      "rules": 244,
       "network": 303,
       "cosmetic": 1316,
       "skipped": 53,
       "regexDropped": 0
     },
     "easylist-nl": {
-      "rules": 469,
+      "rules": 415,
       "network": 469,
       "cosmetic": 1020,
       "skipped": 38,
       "regexDropped": 0
     },
     "easyprivacy": {
-      "rules": 56289,
+      "rules": 9105,
       "network": 56289,
       "cosmetic": 2,
       "skipped": 72,
       "regexDropped": 0
     },
     "anti-cv": {
-      "rules": 2026,
+      "rules": 662,
       "network": 2026,
       "cosmetic": 454,
       "skipped": 2056,
       "regexDropped": 0
     },
     "cookies": {
-      "rules": 2104,
+      "rules": 1788,
       "network": 2104,
       "cosmetic": 23153,
       "skipped": 63,
       "regexDropped": 0
     },
     "annoyances": {
-      "rules": 4137,
+      "rules": 3199,
       "network": 4138,
       "cosmetic": 46067,
       "skipped": 3820,
       "regexDropped": 0
     },
     "notifications": {
-      "rules": 405,
+      "rules": 204,
       "network": 405,
       "cosmetic": 948,
       "skipped": 18,
       "regexDropped": 0
     },
     "social": {
-      "rules": 656,
+      "rules": 596,
       "network": 656,
       "cosmetic": 13163,
       "skipped": 49,
       "regexDropped": 0
     },
     "nocoin": {
-      "rules": 314,
+      "rules": 130,
       "network": 311,
       "cosmetic": 0,
       "skipped": 5,

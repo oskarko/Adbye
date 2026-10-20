@@ -42,8 +42,12 @@ export async function applyRulesets() {
   const catalog = await getCatalog();
   const wanted = new Set(settings.paused ? [] : settings.enabledLists || []);
   const current = new Set(await chrome.declarativeNetRequest.getEnabledRulesets());
-  const enableRulesetIds = catalog.map((l) => l.id).filter((id) => wanted.has(id) && !current.has(id));
-  const disableRulesetIds = [...current].filter((id) => !wanted.has(id));
+  // Big lists are split into <id>, <id>__2, ... (see build-rulesets.mjs).
+  const listOf = (rulesetId) => rulesetId.split("__")[0];
+  const known = new Set(catalog.map((l) => l.id));
+  const all = chrome.runtime.getManifest().declarative_net_request.rule_resources.map((r) => r.id);
+  const enableRulesetIds = all.filter((id) => known.has(listOf(id)) && wanted.has(listOf(id)) && !current.has(id));
+  const disableRulesetIds = [...current].filter((id) => !wanted.has(listOf(id)));
   if (!enableRulesetIds.length && !disableRulesetIds.length) return;
   try {
     await chrome.declarativeNetRequest.updateEnabledRulesets({ enableRulesetIds, disableRulesetIds });

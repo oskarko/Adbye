@@ -88,3 +88,7 @@ footer {
   font-size: 11px;
   text-align: center;
 }
+
+#host-access p {
+  margin: 0 0 8px;
+}

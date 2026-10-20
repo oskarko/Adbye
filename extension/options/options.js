@@ -70,7 +70,7 @@ function renderLists() {
         el("br"),
         el("small", {
           className: "muted",
-          textContent: [rules ? t("listRules", [formatNumber(rules.rules), formatNumber(rules.cosmetic)]) : "", list.license]
+          textContent: [rules ? t("listRules", [formatNumber(rules.network), formatNumber(rules.cosmetic)]) : "", list.license]
             .filter(Boolean)
             .join(" · "),
         }),
