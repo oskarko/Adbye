@@ -260,10 +260,10 @@
     "message": "Océano"
   },
   "optSync": {
-    "message": "Sincronizar ajustes entre navegadores"
+    "message": "Sincronizar ajustes entre tus dispositivos (opcional)"
   },
   "optSyncHelp": {
-    "message": "Usa la sincronización de tu navegador. Nada pasa por servidores de AdBye (no existen)."
+    "message": "Opcional. Usa la sincronización que tu navegador ya tenga; AdBye no tiene cuentas ni servidores. Sin ella, usa la copia de seguridad en archivo."
   },
   "exportBackup": {
     "message": "Exportar copia"

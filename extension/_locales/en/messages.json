@@ -260,10 +260,10 @@
     "message": "Ocean"
   },
   "optSync": {
-    "message": "Sync settings across browsers"
+    "message": "Sync settings across your devices (optional)"
   },
   "optSyncHelp": {
-    "message": "Uses your browser's own sync. Nothing goes through AdBye servers (there are none)."
+    "message": "Optional. Uses whatever sync your browser already has; AdBye has no accounts and no servers. Without it, use the backup file instead."
   },
   "exportBackup": {
     "message": "Export backup"

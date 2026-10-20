@@ -35,9 +35,9 @@ async function setup() {
   await updateIcon();
 }
 
-chrome.runtime.onInstalled.addListener(async ({ reason }) => {
+chrome.runtime.onInstalled.addListener(async () => {
   await setup();
-  if (reason === "install") chrome.runtime.openOptionsPage();
+  // No onboarding: blocking works with the defaults right after install.
 });
 chrome.runtime.onStartup.addListener(setup);
 

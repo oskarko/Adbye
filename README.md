@@ -1,6 +1,6 @@
 # AdBye
 
-A **free and open source (GPL-3.0)** ad blocker for Chrome, Edge and Brave (Manifest V3). Every feature AdBlock reserves for its Premium plan is included for free, with no account.
+A **free and open source (GPL-3.0)** ad blocker for Chrome, Edge and Brave (Manifest V3). Every feature AdBlock reserves for its Premium plan is included for free. There are no accounts, sign-ups, licenses or AdBye servers: install it and it works.
 
 AdBye is an independent reimplementation. It contains no AdBlock code, proprietary filter lists, images or trademarks, and is not affiliated with AdBlock, eyeo or Adblock Plus.
 
