@@ -1,7 +1,7 @@
 {
   "name": "adbye",
   "version": "1.0.0",
-  "description": "AdBye — bloqueador de anuncios libre (GPL-3.0) con todas las funciones premium gratis",
+  "description": "Free, open source (GPL-3.0) ad blocker with every premium feature included and no account needed",
   "scripts": {
     "build:lists": "node scripts/build-rulesets.mjs",
     "build:lists:offline": "node scripts/build-rulesets.mjs --offline",

@@ -21,6 +21,6 @@ const dist = path.join(ROOT, "dist");
 await fs.mkdir(dist, { recursive: true });
 const out = path.join(dist, `adbye-${manifest.version}.zip`);
 await fs.rm(out, { force: true });
-execFileSync("zip", ["-r", "-q", "-X", out, ".", "-x", "*.DS_Store"], { cwd: EXT, stdio: "inherit" });
+execFileSync("zip", ["-r", "-q", "-X", out, ".", "-x", "*.DS_Store", "_metadata/*"], { cwd: EXT, stdio: "inherit" });
 const { size } = await fs.stat(out);
 console.log(`${path.relative(ROOT, out)} (${(size / 1024 / 1024).toFixed(1)} MB)`);
